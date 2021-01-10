@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidWorkshopApp2</string>
+    <string name="clothing_tv">Clothing item</string>
+    <string name="collection_tv">Collection</string>
+    <string name="season_tv">Season</string>
+    <string name="designer_tv">Designer</string>
+    <string name="load_btn">Save</string>
+    <string name="brand_tv">Brand</string>
+    <string name="gucci">Gucci</string>
+    <string name="lv">Louis Vuitton</string>
+    <string name="fendi">Fendi</string>
+    <string name="hermes">Hermes</string>
+    <string name="dolce">Dolce Gabanna</string>
+    <string name="ferragamo">Salvatore Ferragamo</string>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextDesigner"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        android:backgroundTint="@color/button"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/font_color"
+        android:textCursorDrawable="@color/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <TextView
+        android:id="@+id/tvDesigner"
+        android:layout_width="238dp"
+        android:layout_height="42dp"
+        android:background="@color/bg"
+        android:fontFamily="monospace"
+        android:text="@string/designer_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <Button
+        android:id="@+id/loadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button"
+        android:fontFamily="monospace"
+        android:onClick="sendButtonCLick"
+        android:text="@string/load_btn"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <EditText
+        android:id="@+id/editTextClothingName"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        android:backgroundTint="@color/button"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/font_color"
+        android:textCursorDrawable="@color/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156" />
+
+    <TextView
+        android:id="@+id/tvClothing"
+        android:layout_width="155dp"
+        android:layout_height="40dp"
+        android:background="@color/bg"
+        android:fontFamily="monospace"
+        android:text="@string/clothing_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <EditText
+        android:id="@+id/editTextSeason"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        android:backgroundTint="@color/button"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/font_color"
+        android:textCursorDrawable="@color/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <TextView
+        android:id="@+id/tvBrand"
+        android:layout_width="227dp"
+        android:layout_height="44dp"
+        android:background="@color/bg"
+        android:fontFamily="monospace"
+        android:text="@string/brand_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.673" />
+
+    <TextView
+        android:id="@+id/tvSeason"
+        android:layout_width="238dp"
+        android:layout_height="42dp"
+        android:background="@color/bg"
+        android:fontFamily="monospace"
+        android:text="@string/season_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387" />
+
+    <TextView
+        android:id="@+id/tvCollection"
+        android:layout_width="155dp"
+        android:layout_height="40dp"
+        android:background="@color/bg"
+        android:fontFamily="monospace"
+        android:text="@string/collection_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <EditText
+        android:id="@+id/editTextCollection"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        android:backgroundTint="@color/button"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/font_color"
+        android:textCursorDrawable="@color/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303" />
+
+    <Spinner
+        android:id="@+id/brandsSpinner"
+        android:layout_width="306dp"
+        android:layout_height="41dp"
+        android:backgroundTint="@color/button"
+        android:dropDownSelector="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.725" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

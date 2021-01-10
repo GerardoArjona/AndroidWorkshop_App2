@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AndroidWorkshopApp2</string>
+    <string name="clothing_tv">Prenda</string>
+    <string name="collection_tv">Colección</string>
+    <string name="season_tv">Temporada</string>
+    <string name="designer_tv">Diseñador</string>
+    <string name="load_btn">Guardar</string>
+    <string name="brand_tv">Marca</string>
+    <string name="lv">Louis Vuitton</string>
+    <string name="gucci">Gucci</string>
+    <string name="fendi">Fendi</string>
+    <string name="hermes">Hermes</string>
+    <string name="dolce">Dolce Gabanna</string>
+    <string name="ferragamo">Salvatore Ferragamo</string>
+</resources>
