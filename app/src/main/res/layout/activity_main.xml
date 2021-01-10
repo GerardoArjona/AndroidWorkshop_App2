@@ -7,6 +7,22 @@
     android:background="@color/bg"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/listBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button"
+        android:fontFamily="monospace"
+        android:onClick="sendButtonCLick"
+        android:text="@string/list_btn"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
+
     <EditText
         android:id="@+id/editTextDesigner"
         android:layout_width="306dp"
@@ -45,14 +61,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
         android:fontFamily="monospace"
-        android:onClick="sendButtonCLick"
+        android:onClick="addItemToList"
         android:text="@string/load_btn"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84000003" />
+        app:layout_constraintVertical_bias="0.821" />
 
     <EditText
         android:id="@+id/editTextClothingName"
@@ -85,6 +101,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.105" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="106dp"
+        android:layout_height="40dp"
+        android:background="@color/bg"
+        android:fontFamily="monospace"
+        android:text="@string/count_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972" />
+
+    <TextView
+        android:id="@+id/tvListCount"
+        android:layout_width="92dp"
+        android:layout_height="40dp"
+        android:background="@color/bg"
+        android:fontFamily="monospace"
+        android:text="@string/listCount_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/font_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972" />
 
     <EditText
         android:id="@+id/editTextSeason"

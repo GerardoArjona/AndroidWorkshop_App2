@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,8 +20,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     EditText etCollection;
     EditText etSeason;
     EditText etDesigner;
+    TextView tvCount;
+    String brand;
 
     List<String> brands  = new ArrayList<>();
+    List<Item> items  = new ArrayList<Item>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         etSeason = findViewById(R.id.editTextSeason);
         etDesigner = findViewById(R.id.editTextDesigner);
 
+        tvCount = findViewById(R.id.tvCount);
+
         //Brands Spinner
         Spinner brandsSpinner = (Spinner) findViewById(R.id.brandsSpinner);
         ArrayAdapter<String> brandsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, brands);
@@ -49,11 +55,61 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
         // Toast.makeText(getApplicationContext(), "Selected User: "+brands[position] ,Toast.LENGTH_SHORT).show();
-        // brand = brands.get(position);
+        brand = brands.get(position);
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO - Custom Code
+    }
+
+    public boolean addItemToList(View view) {
+
+        if(etClothingName.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), getString(R.string.clothingNameError) ,Toast.LENGTH_SHORT).show();
+            etClothingName.setError(getString(R.string.clothingNameErrorHelp));
+            return false;
+        }
+
+        if(etCollection.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), getString(R.string.collectionError) ,Toast.LENGTH_SHORT).show();
+            etCollection.setError(getString(R.string.collectionErrorHelp));
+            return false;
+        }
+
+        if(etSeason.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), getString(R.string.seasonError) ,Toast.LENGTH_SHORT).show();
+            etSeason.setError(getString(R.string.seasonErrorHelp));
+            return false;
+        }
+
+        if(etDesigner.getText().toString().equals("")){
+            Toast.makeText(getApplicationContext(), getString(R.string.designerError) ,Toast.LENGTH_SHORT).show();
+            etDesigner.setError(getString(R.string.designerErrorHelp));
+            return false;
+        }
+
+        String designer = etDesigner.getText().toString();
+        String season = etSeason.getText().toString();
+        String collection = etCollection.getText().toString();
+        String clothingName = etClothingName.getText().toString();
+
+        items.add(
+                new Item(
+                        designer, //Designer
+                        season, //Season
+                        collection, //Collection
+                        clothingName, //Clothing Name
+                        this.brand
+                )
+        );
+
+        tvCount.setText(String.valueOf(items.size()));
+        etDesigner.setText(null);
+        etSeason.setText(null);
+        etCollection.setText(null);
+        etClothingName.setText(null);
+
+        return true;
     }
 }

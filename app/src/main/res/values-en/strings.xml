@@ -13,4 +13,15 @@
     <string name="hermes">Hermes</string>
     <string name="dolce">Dolce Gabanna</string>
     <string name="ferragamo">Salvatore Ferragamo</string>
+    <string name="list_btn">View list</string>
+    <string name="listCount_tv">Items:</string>
+    <string name="count_tv">0</string>
+    <string name="clothingNameError">Empty clothing item</string>
+    <string name="clothingNameErrorHelp">Clothing item is required</string>
+    <string name="collectionError">Empty collection</string>
+    <string name="collectionErrorHelp">Collection is required</string>
+    <string name="seasonError">Empty season</string>
+    <string name="seasonErrorHelp">Season is required</string>
+    <string name="designerError">Empty designer</string>
+    <string name="designerErrorHelp">Designer is required</string>
 </resources>
