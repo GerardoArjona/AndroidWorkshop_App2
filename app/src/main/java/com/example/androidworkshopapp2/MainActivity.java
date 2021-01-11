@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -52,6 +51,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         brandsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         brandsSpinner.setAdapter(brandsAdapter);
         brandsSpinner.setOnItemSelectedListener(this);
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(getIntent().getSerializableExtra("NEW_ITEMS") != null){
+            items = (ArrayList<Item>) getIntent().getSerializableExtra("NEW_ITEMS");
+            tvCount.setText(String.valueOf(items.size()));
+        }
+
     }
 
     @Override

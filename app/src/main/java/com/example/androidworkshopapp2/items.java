@@ -2,6 +2,7 @@ package com.example.androidworkshopapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,9 +16,13 @@ public class items extends AppCompatActivity {
 
     ArrayAdapter adapter;
     ArrayList<Item> items;
+    Intent mainIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        mainIntent = new Intent(getBaseContext(), MainActivity.class);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items);
 
@@ -43,7 +48,14 @@ public class items extends AppCompatActivity {
         items.remove(position);
         adapter.notifyDataSetChanged();
 
+        mainIntent.putExtra("NEW_ITEMS", items);
+
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(mainIntent);
     }
 
 }
