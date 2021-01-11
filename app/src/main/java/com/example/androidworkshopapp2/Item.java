@@ -2,15 +2,19 @@ package com.example.androidworkshopapp2;
 
 import android.widget.EditText;
 
-public class Item {
+import java.io.Serializable;
 
+public class Item implements Serializable {
+
+    int id;
     String designer;
     String season;
     String collection;
     String clothingName;
     String brand;
 
-    public Item(String designer, String season, String collection, String clothingName, String brand) {
+    public Item(int id, String designer, String season, String collection, String clothingName, String brand) {
+        this.id = id;
         this.brand = brand;
         this.clothingName = clothingName;
         this.collection = collection;

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
         android:fontFamily="monospace"
-        android:onClick="sendButtonCLick"
+        android:onClick="toItemList"
         android:text="@string/list_btn"
         app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

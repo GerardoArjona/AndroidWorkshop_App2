@@ -2,7 +2,9 @@ package com.example.androidworkshopapp2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String brand;
 
     List<String> brands  = new ArrayList<>();
-    List<Item> items  = new ArrayList<Item>();
+    ArrayList<Item> items  = new ArrayList<Item>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         items.add(
                 new Item(
+                        items.size() +1,
                         designer, //Designer
                         season, //Season
                         collection, //Collection
@@ -109,6 +112,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         etSeason.setText(null);
         etCollection.setText(null);
         etClothingName.setText(null);
+
+        return true;
+    }
+
+    public boolean toItemList(View view) {
+
+        Intent listIntent = new Intent(getBaseContext(), items.class);
+
+        if(items.size() == 0){
+            Toast.makeText(getApplicationContext(), getString(R.string.itemsError) ,Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        listIntent.putExtra("ITEMS", items);
+
+        startActivity(listIntent);
 
         return true;
     }
