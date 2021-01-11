@@ -17,6 +17,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
+        <ImageView
+            android:id="@+id/ivLogoPicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/brandDescription"
+            tools:srcCompat="@tools:sample/avatars" />
+
         <TextView
             android:id="@+id/tvClothingNameSingleItem"
             android:layout_width="match_parent"
@@ -24,6 +31,7 @@
             android:fontFamily="monospace"
             android:textColor="@color/font_color"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -38,6 +46,7 @@
             android:fontFamily="monospace"
             android:textColor="@color/font_color"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -51,6 +60,7 @@
             android:fontFamily="monospace"
             android:textColor="@color/font_color"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -64,6 +74,7 @@
             android:fontFamily="monospace"
             android:textColor="@color/font_color"
             android:textStyle="bold"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -45,6 +46,7 @@ public class ItemsAdapter extends ArrayAdapter<Item> {
         public TextView display_collection;
         public TextView display_season;
         public TextView display_designer;
+        public ImageView display_logo;
 
     }
 
@@ -60,12 +62,27 @@ public class ItemsAdapter extends ArrayAdapter<Item> {
                 holder.display_collection = (TextView) vi.findViewById(R.id.tvCollectionSingleItem);
                 holder.display_season = (TextView) vi.findViewById(R.id.tvSeasonSingleItem);
                 holder.display_designer = (TextView) vi.findViewById(R.id.tvDesignerSingleItem);
-
+                holder.display_logo = (ImageView) vi.findViewById((R.id.ivLogoPicture));
 
                 vi.setTag(holder);
             } else {
                 holder = (ViewHolder) vi.getTag();
             }
+
+            if(items.get(position).brand.equals("Gucci"))
+                holder.display_logo.setImageResource(R.drawable.gucci);
+            else if(items.get(position).brand.equals("Fendi"))
+                holder.display_logo.setImageResource(R.drawable.fendi);
+            else if(items.get(position).brand.equals("Salvatore Ferragamo"))
+                holder.display_logo.setImageResource(R.drawable.ferragamo);
+            else if(items.get(position).brand.equals("Dolce Gabanna"))
+                holder.display_logo.setImageResource(R.drawable.dolce);
+            else if(items.get(position).brand.equals("Hermes"))
+                holder.display_logo.setImageResource(R.drawable.hermes);
+            else if(items.get(position).brand.equals("Louis Vuitton"))
+                holder.display_logo.setImageResource(R.drawable.lv);
+            else
+                holder.display_logo.setImageResource(R.drawable.def);
 
 
 

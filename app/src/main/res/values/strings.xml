@@ -24,4 +24,5 @@
     <string name="designerError">Diseñador vacía</string>
     <string name="designerErrorHelp">Se requiere un diseñador</string>
     <string name="itemsError">Lista vacía</string>
+    <string name="brandDescription">logo-brand</string>
 </resources>
