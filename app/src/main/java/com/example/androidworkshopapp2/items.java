@@ -12,14 +12,18 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class items extends AppCompatActivity {
+
+    ArrayAdapter adapter;
+    ArrayList<Item> items;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items);
 
-        ArrayList<Item> items = (ArrayList<Item>) getIntent().getSerializableExtra("ITEMS");
+        items = (ArrayList<Item>) getIntent().getSerializableExtra("ITEMS");
 
-        ArrayAdapter adapter = new ItemsAdapter(this, 0, items);
+        adapter = new ItemsAdapter(this, 0, items);
 
         ListView listView = (ListView) findViewById(R.id.items_list);
         listView.setAdapter(adapter);
@@ -32,4 +36,14 @@ public class items extends AppCompatActivity {
         });
 
     }
+
+    public boolean deleteItemFromList(View view) {
+
+        int position = (Integer) view.getTag();
+        items.remove(position);
+        adapter.notifyDataSetChanged();
+
+        return true;
+    }
+
 }

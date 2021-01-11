@@ -27,4 +27,5 @@
     <string name="itemsError">Empty list</string>
     <string name="brandDescription">logo-brand</string>
     <string name="idToast">Selected item has id:</string>
+    <string name="delete_btn">Delete</string>
 </resources>

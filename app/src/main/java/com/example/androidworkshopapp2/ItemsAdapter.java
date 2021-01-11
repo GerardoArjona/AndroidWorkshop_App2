@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -47,7 +49,7 @@ public class ItemsAdapter extends ArrayAdapter<Item> {
         public TextView display_season;
         public TextView display_designer;
         public ImageView display_logo;
-
+        public Button delete_button;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -63,6 +65,7 @@ public class ItemsAdapter extends ArrayAdapter<Item> {
                 holder.display_season = (TextView) vi.findViewById(R.id.tvSeasonSingleItem);
                 holder.display_designer = (TextView) vi.findViewById(R.id.tvDesignerSingleItem);
                 holder.display_logo = (ImageView) vi.findViewById((R.id.ivLogoPicture));
+                holder.delete_button = (Button) vi.findViewById(R.id.deleteItemBtn);
 
                 vi.setTag(holder);
             } else {
@@ -90,6 +93,8 @@ public class ItemsAdapter extends ArrayAdapter<Item> {
             holder.display_collection.setText(items.get(position).collection);
             holder.display_season.setText(items.get(position).season);
             holder.display_designer.setText(items.get(position).designer);
+
+            holder.delete_button.setTag(position);
 
 
         } catch (Exception e) {
