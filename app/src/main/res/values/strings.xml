@@ -25,4 +25,5 @@
     <string name="designerErrorHelp">Se requiere un diseñador</string>
     <string name="itemsError">Lista vacía</string>
     <string name="brandDescription">logo-brand</string>
+    <string name="idToast">La prenda seleccionada tiene id:</string>
 </resources>

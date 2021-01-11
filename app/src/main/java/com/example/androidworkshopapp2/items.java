@@ -3,11 +3,13 @@ package com.example.androidworkshopapp2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class items extends AppCompatActivity {
     @Override
@@ -21,6 +23,13 @@ public class items extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.items_list);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), getString(R.string.idToast) + items.get(position).id ,Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }

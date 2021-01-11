@@ -26,4 +26,5 @@
     <string name="designerErrorHelp">Designer is required</string>
     <string name="itemsError">Empty list</string>
     <string name="brandDescription">logo-brand</string>
+    <string name="idToast">Selected item has id:</string>
 </resources>
